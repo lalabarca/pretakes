@@ -1,0 +1,19 @@
+<div class="container">
+  <%= link_to "← Voir toutes les voitures", cars_path, class: "link-back" %>
+  <h1>Location <%= @car.brand %> <%= @car.model %></h1>
+  <div class="row">
+    <div class="col-12 col-lg-7">
+      <figure>
+        <%= image_tag @car.photo_url, alt:"photo voiture #{car.brand}" %>
+      </figure>
+      <h2><%= @car.address %></h2>
+      <h3>À propos</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa suscipit consequuntur in, porro, excepturi sapiente molestiae ipsam ad, praesentium exercitationem repudiandae et cumque quas facere beatae? Iste nam eius nobis.</p>
+    </div>
+    <div class="col-12 col-lg-5">
+      <%= simple_form_for(@car, @booking) do |f| %>
+        f.input
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="card-product">
+  <%= image_tag car.photo_url, alt:"photo voiture #{car.brand}" %>
+  <div class="card-product-infos">
+    <h3><%= car.brand %> <%= car.model %></h3>
+    <p><%= car.address %></p>
+    <p><strong><%= car.price_per_day %>€</strong> par jour</p>
+    <%= link_to "Réserver", car_path(car), class: "btn btn-flat" %>
+  </div>
+</div>
