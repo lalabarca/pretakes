@@ -1,5 +1,0 @@
-fixedFooter = () => {
-
-}
-
-export { fixedFooter };

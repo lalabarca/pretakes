@@ -8,14 +8,15 @@ a:hover {
 
 .btn-first, .btn-second {
   color: #fff;
-  padding: 8px 24px;
+  padding: 10px 25px;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 1;
   border: none;
+  transition: all 0.4s ease-out;
 
     &:hover {
-      opacity: 0.7;
+      opacity: 0.8;
       color: #fff;
     }
 }
