@@ -1,5 +1,6 @@
-<div class="container">
+<div class="container index-cars">
   <h1>Choisissez la voiture de vos rêves ✨</h1>
+  <p>Nous avons <%= pluralize(@cars.count, "voiture") %> pour vous !</p>
   <div class="row">
     <% @cars.each do |car| %>
       <div class="col-12 col-md-6 col-lg-3">

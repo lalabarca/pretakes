@@ -5,13 +5,11 @@ class BookingsController < ApplicationController
     @booking.car = @car
     @booking.user = current_user
     if @booking.save
-      flash.notice = "Youpi ! Votre réservation a été créée ! 🎉"
-      redirect_to car_path(@car)
+      flash.notice = "Youpi ! 🎉 Votre réservation a été créée !"
     else
-      flash.alert = "Erreur: impossible de faire la réservation."
-      raise
-      render 'cars/show'
+      flash.alert = " ⛔️ Erreur : veuillez remplir tous les champs du formulaire."
     end
+    redirect_to car_path(@car, anchor: "start_date")
   end
 
   private

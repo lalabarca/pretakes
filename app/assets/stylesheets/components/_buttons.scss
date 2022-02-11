@@ -1,0 +1,47 @@
+a, input[type="submit"] {
+  transition: all 0.4s ease-out;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.btn-first, .btn-second {
+  color: #fff;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  border: none;
+
+    &:hover {
+      opacity: 0.7;
+      color: #fff;
+    }
+}
+
+.btn-first {
+  background: linear-gradient(to right, $first 0%, $second 100%);
+}
+
+.btn-second {
+  color: #fff;
+  background: linear-gradient(to left, $third 0%, $fifth 100%);
+}
+
+
+.link-back {
+  padding: 0.7rem 1.2rem;
+  border-bottom: 2px solid $first;
+  color: $first;
+  display: inline-block;
+  // font-weight: bold;
+  font-size: 1.2rem;
+
+  &:hover {
+    color: #fff;
+    background-color: $first;
+    border: none;
+    border-radius: 50px;
+  }
+}

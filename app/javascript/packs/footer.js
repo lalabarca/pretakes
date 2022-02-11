@@ -1,0 +1,5 @@
+fixedFooter = () => {
+
+}
+
+export { fixedFooter };

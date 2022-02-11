@@ -1,0 +1,39 @@
+.flash {
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  margin: 8px;
+
+  .c-button {
+    padding: 0.4rem;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    color: #000;
+    text-decoration: none;
+    opacity: .75;
+  }
+
+}
+
+.flash-success {
+  border: 2px solid $third;
+  box-shadow: 0 0 10px rgba($third, 0.8);
+}
+
+.flash-warning {
+  border: 2px solid #FFC65A;
+  box-shadow: 0 0 10px rgba(#FFC65A, 0.8);
+}
+
+.flash-danger {
+  border: 2px solid #FD1015;
+}

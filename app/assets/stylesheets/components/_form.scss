@@ -1,0 +1,14 @@
+.bloc-form {
+  background-color: #fff;
+  border-radius: $radius-custom;
+  padding: 2rem;
+  box-shadow: $box-shadow;
+
+  p:first-of-type {
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}

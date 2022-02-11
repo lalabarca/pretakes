@@ -1,2 +1,21 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="hero">
+  <div class="container">
+    <h1>Location de voitures entre particuliers</h1>
+    <h2>Trouvez un véhicule personnel rapidement et sans covoiturage 😉</h2>
+    <%= link_to cars_path, class: "btn btn-first" do %>
+      Réserver une voiture
+    <% end %>
+  </div>
+</div>
+<section class="home-section">
+  <div class="container">
+    <h2>Les derniers véhicules disponibles</h2>
+    <div class="row">
+      <% @cars.each do |car| %>
+        <div class="col-12 col-lg-3">
+          <%= render 'cars/partial/car-card', car: car %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>

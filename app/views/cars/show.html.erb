@@ -1,21 +1,30 @@
-<div class="container">
+<div class="container py-5">
   <%= link_to "← Voir toutes les voitures", cars_path, class: "link-back" %>
-  <h1>Location <%= @car.brand %> <%= @car.model %></h1>
+  <h1 class="heading-show">Location <%= @car.brand %> <%= @car.model %></h1>
   <div class="row">
-    <div class="col-12 col-lg-7">
+    <div class="col-12 col-lg-7 body-car">
       <figure>
         <%= image_tag @car.photo_url, alt:"photo voiture #{@car.brand}" %>
       </figure>
-      <h2><%= @car.address %></h2>
-      <h3>À propos</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa suscipit consequuntur in, porro, excepturi sapiente molestiae ipsam ad, praesentium exercitationem repudiandae et cumque quas facere beatae? Iste nam eius nobis.</p>
+      <article>
+        <p>Le véhicule se trouve à :</p>
+        <h3><i class="fas fa-map-marker-alt"></i><%= @car.address %></h3>
+        <p>Année de production :</p>
+        <h3><%= @car.year_of_production %></h3>
+        <p>Contacter le loueur :</p>
+        <%= mail_to @car.user.email, "Envoyer un email", class: "btn btn-second" %>
+      </article>
     </div>
     <div class="col-12 col-lg-5">
-      <%= simple_form_for [ @car, @booking ] do |f| %>
-        <%= f.input :starts_at, as: :string, required: true, input_html: {id: "start_date"} %>
-        <%= f.input :ends_at, as: :string, required: true, input_html: {id: "end_date"} %>
-        <%= f.button :submit, "Réserver cette voiture", class: "btn btn-flat" %>
-      <% end %>
+      <aside class="bloc-form">
+        <p>Tarif à la journée</p>
+        <h2><strong><%= @car.price_per_day %> €</strong></h2>
+        <%= simple_form_for [ @car, @booking ] do |f| %>
+          <%= f.input :starts_at, as: :string, label: "Date de départ", required: true, input_html: {id: "start_date"} %>
+          <%= f.input :ends_at, as: :string, label: "Date de retour", required: true, input_html: {id: "end_date"} %>
+          <%= f.button :submit, "Réserver cette voiture", class: "btn btn-first mt-4" %>
+        <% end %>
+      </aside>
     </div>
   </div>
 </div>
