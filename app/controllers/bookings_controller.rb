@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
     @booking.car = @car
     @booking.user = current_user
     if @booking.save
-      flash.notice = "Youpi ! 🎉 Votre réservation a été créée !"
+      flash.notice = "Youpi ! 🎉 Votre réservation a été créée. Le loueur vous contactera."
     else
       flash.alert = " ⛔️ Erreur : veuillez remplir tous les champs du formulaire."
     end
