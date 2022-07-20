@@ -69,3 +69,6 @@ gem 'factory_bot_rails', group: [ :test ]
 
 # Images
 gem 'cloudinary', '~> 1.16.0'
+
+# Rails Admin
+gem "rails_admin", "~> 3.0"
