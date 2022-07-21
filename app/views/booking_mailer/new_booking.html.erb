@@ -1,0 +1,15 @@
+<h1><%= image_tag "https://res.cloudinary.com/dskz4h4td/image/upload/v1644591526/sport-car_ulpx6b.png" %> Pret'akes</h1>
+
+<h2>Nouvelle réservation</h2>
+
+<p>
+  Votre voiture <strong><%= @booking.car.brand %> <%= @booking.car.model %> (<%= @booking.car.year_of_production %>)</strong> a été réservée par <%= mail_to "#{@booking.user.email}", "#{@booking.user.email}" %>
+</p>
+
+<h3>Détails de la réservation</h3>
+
+<ul>
+  <li>Début: <%= @booking.starts_at %>.</li>
+  <li>Fin: <%= @booking.ends_at %> .</li>
+  <li>Prix par jour: <%= @booking.car.price_per_day %> €.</li>
+</ul>
