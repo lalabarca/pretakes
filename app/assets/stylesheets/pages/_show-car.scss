@@ -28,3 +28,9 @@
 .heading-show {
   margin: 2rem 0 1.4rem 0;
 }
+
+@media (max-width: 500px) {
+  .body-car figure  {
+    height: 300px;
+  }
+}
