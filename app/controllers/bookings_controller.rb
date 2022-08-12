@@ -6,7 +6,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     if @booking.save
       flash.notice = "Youpi ! 🎉 Votre réservation a été créée. Le loueur vous contactera."
-      BookingMailer.new_booking(@booking).deliver_now
+      # BookingMailer.new_booking(@booking).deliver_now
     else
       flash.alert = " ⛔️ Erreur : veuillez remplir tous les champs du formulaire."
     end
